@@ -117,9 +117,9 @@ void  loop()
     }
     digitalWrite(Led, LOW);
 
-    Serial.print("\nlocal_min: ");
+    Serial.print("\n local_min: ");
     Serial.print(local_min);
-    Serial.print("local_max: ");
+    Serial.print(" local_max: ");
     Serial.print(local_max);
     Serial.print(" rotation count: ");
     Serial.print(rotation_count);
@@ -154,9 +154,9 @@ void  loop()
       flag = 0;
     }
     digitalWrite(Led, HIGH);
-    Serial.print("\nlocal_min: ");
+    Serial.print("\n local_min: ");
     Serial.print(local_min);
-    Serial.print("local_max: ");
+    Serial.print(" local_max: ");
     Serial.print(local_max);
     Serial.print(" rotation count: ");
     Serial.print(rotation_count);
@@ -184,7 +184,7 @@ void  loop()
 
     first_read = 1;
     
-    if((abs(desired_rot_per_min - rot_per_min) <= 10) || (abs(rot_per_min - desired_rot_per_min) <= 10)){
+    if((abs(desired_rot_per_min - rot_per_min) <= 5) || (abs(rot_per_min - desired_rot_per_min) <= 5)){
       jackpot = 1;
     } else if(desired_rot_per_min > rot_per_min){
       local_max = random(local_max,255);
